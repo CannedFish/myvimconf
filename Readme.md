@@ -15,7 +15,12 @@ Launch vim and run :PluginInstall
 
 # If needed
 cd ~/.vim/bundle/YouCompleteMe
+# For python 2.6+
+sudo apt-get install python-dev
 ./install.py --all
+# For python 3.3+
+sudo apt-get install python3-dev
+python3 install.py --all
 ```
 
 ## Work with screen
