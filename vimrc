@@ -200,8 +200,16 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'hsanson/vim-android'
+" Plugin 'hsanson/vim-android'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/The-NERD-Commenter'
+Plugin 'vim-scripts/The-NERD-tree'
+Plugin 'tomtom/checksyntax_vim'
+Plugin 'vim-scripts/jsbeautify'
+Plugin 'vim-scripts/minibufexpl.vim'
+Plugin 'vim-scripts/SuperTab'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/winmanager'
 
 call vundle#end()
 filetype plugin indent on " 开启插件
