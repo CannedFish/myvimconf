@@ -1,5 +1,15 @@
 My vim configuration
 
+## Vim version
+
+Based on YCM
+
+Update to VIM8 on CentOS
+``` shell
+curl -L https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo -o /etc/yum.repos.d/mcepl-vim8-epel-7.repo
+yum update vim*
+```
+
 ## Quick start
 
 ```shell
@@ -15,7 +25,7 @@ sudo yum install ctags
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 Launch vim and run :PluginInstall
 
-# If needed
+# Compile YCM if needed
 cd ~/.vim/bundle/YouCompleteMe
 # For python 2.6+
 # In Ubuntu
@@ -23,6 +33,7 @@ sudo apt-get install python-dev
 # In CentOS
 sudo yum install python-devel
 ./install.py --all
+
 # For python 3.3+
 sudo apt-get install python3-dev
 # In CentOS
