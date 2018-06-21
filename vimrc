@@ -210,6 +210,7 @@ Plugin 'vim-scripts/minibufexpl.vim'
 Plugin 'vim-scripts/SuperTab'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/winmanager'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on " 开启插件
