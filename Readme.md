@@ -4,6 +4,13 @@ My vim configuration
 
 Based on YCM
 
+Update to VIM8 on Ubuntu 1604
+``` shell
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt-get update
+sudo apt-get install vim
+```
+
 Update to VIM8 on CentOS
 ``` shell
 curl -L https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo -o /etc/yum.repos.d/mcepl-vim8-epel-7.repo
