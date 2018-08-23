@@ -36,11 +36,19 @@ Run :GoInstallBinaries for Golang
 
 # Compile YCM if needed
 cd ~/.vim/bundle/YouCompleteMe
+
 # For python 2.6+
 # In Ubuntu
 sudo apt-get install python-dev
 # In CentOS
 sudo yum install python-devel
+
+# If use system clang
+# In Ubuntu
+sudo apt-get install libclang-x.0-dev
+./install.py --all --system-clang
+
+# Else, just
 ./install.py --all
 
 # For python 3.3+
