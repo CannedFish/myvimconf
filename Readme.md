@@ -25,9 +25,9 @@ cp vimrc ~/.vimrc
 cp -r vim ~/.vim
 
 # In Ubuntu
-sudo apt-get install ctags
+sudo apt-get install ctags cmake
 # In CentOS
-sudo yum install ctags
+sudo yum install ctags cmake
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 Launch vim and run :PluginInstall
@@ -37,7 +37,7 @@ Run :GoInstallBinaries for Golang
 # Compile YCM if needed
 cd ~/.vim/bundle/YouCompleteMe
 
-# For python 2.6+
+# For python 2
 # In Ubuntu
 sudo apt-get install python-dev
 # In CentOS
@@ -46,12 +46,12 @@ sudo yum install python-devel
 # If use system clang
 # In Ubuntu
 sudo apt-get install libclang-x.0-dev
-./install.py --all --system-clang
+./install.py --all --system-libclang
 
 # Else, just
 ./install.py --all
 
-# For python 3.3+
+# For python 3
 sudo apt-get install python3-dev
 # In CentOS
 sudo yum install python3-devel
