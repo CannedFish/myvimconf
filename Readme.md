@@ -46,7 +46,8 @@ sudo yum install python-devel
 # If use system clang
 # In Ubuntu
 sudo apt-get install libclang-x.0-dev
-./install.py --all --system-libclang
+# Install golang first
+./install.py --clang-completer --system-libclang --go-completer
 
 # Else, just
 ./install.py --all
@@ -55,7 +56,7 @@ sudo apt-get install libclang-x.0-dev
 sudo apt-get install python3-dev
 # In CentOS
 sudo yum install python3-devel
-python3 install.py --all
+python3 install.py --clang-completer --system-libclang --go-completer
 ```
 
 ## Work with screen
