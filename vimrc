@@ -221,6 +221,7 @@ filetype plugin indent on " 开启插件
 
 "================ YCM ==================
 let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
 """"""""""""""""""""copy all file""""""""""""""""""""
 "Use command 'yaf' to yank a file
