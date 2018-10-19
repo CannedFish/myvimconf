@@ -249,8 +249,8 @@ augroup rst
 augroup end
 
 "============== vim-go ===============
-let g:syntastic_go_checkers = ['golint', 'govet']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+" let g:syntastic_go_checkers = ['golint', 'govet']
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 " Close auto format
-let g:go_fmt_autosave = 0
-let g:go_asmfmt_autosave = 0
+" let g:go_fmt_autosave = 0
+" let g:go_asmfmt_autosave = 0
