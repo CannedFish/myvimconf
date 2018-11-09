@@ -13,8 +13,11 @@ sudo apt-get install vim
 
 Update to VIM8 on CentOS
 ``` shell
-curl -L https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo -o /etc/yum.repos.d/mcepl-vim8-epel-7.repo
-yum update vim*
+rpm -Uvh http://mirror.ghettoforge.org/distributions/gf/gf-release-latest.gf.el7.noarch.rpm
+rpm --import http://mirror.ghettoforge.org/distributions/gf/RPM-GPG-KEY-gf.el7
+yum -y remove vim-minimal vim-common vim-enhanced sudo
+# run as root
+yum -y --enablerepo=gf-plus install vim-enhanced sudo
 ```
 
 ## Quick start
