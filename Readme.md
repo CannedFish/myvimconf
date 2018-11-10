@@ -44,7 +44,75 @@ cd ~/.vim/bundle/YouCompleteMe
 # In Ubuntu
 sudo apt-get install python-dev
 # In CentOS
-sudo yum install python-devel
+1. Download and update to latest python;
+  ```shell
+  yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-dev
+
+  mv /usr/bin/python /usr/bin/python2.7.5
+  ln -s /usr/local/bin/python2.7 /usr/bin/python # 增加软链接
+
+  wget  https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tar.xz
+  tar xf Python-2.7.14.tar.xz
+  cd Python-2.7.14
+
+  ./configure --enable-optimizations --enable-unicode=ucs4 --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib"
+  make && sudo make altinstall
+
+  # vi /usr/bin/yum
+  # change #!/usr/bin/python to #!/usr/bin/python2.7
+  # vi /usr/libexec/urlgrabber-ext-down
+  # change #!/usr/bin/python to #!/usr/bin/python2.7
+
+  wget https://bootstrap.pypa.io/get-pip.py
+  python get-pip.py
+  whereis pip #查找pip的位置
+  mv /usr/bin/pip /usr/bin/pip.bak
+  ln -s /usr/local/bin/pip2.7 /usr/bin/pip
+  ```
+
+2. Download and update to latest cmake;
+```shell
+yum autoremove cmake
+wget https://cmake.org/files/v3.7/cmake-3.7.1.tar.gz
+tar xzf cmake-3.7.1.tar.gz
+cd cmake-3.7.1
+./bootstrap
+gmake -j$(nproc)
+make install
+cd ..
+rm -fr cmake*)
+```
+
+3. Download and update to latest clang;
+```shell
+yum install yum-utils 
+yum-builddep -y llvm clang
+wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+easy_install pip
+pip install distribute
+
+wget http://llvm.org/releases/3.9.1/llvm-3.9.1.src.tar.xz
+wget http://llvm.org/releases/3.9.1/cfe-3.9.1.src.tar.xz
+wget http://llvm.org/releases/3.9.1/compiler-rt-3.9.1.src.tar.xz
+wget http://llvm.org/releases/3.9.1/clang-tools-extra-3.9.1.src.tar.xz
+tar xf llvm-3.9.1.src.tar.xz
+mv llvm-3.9.1.src llvm
+cd llvm/tools
+tar xf ../../cfe-3.9.1.src.tar.xz
+mv cfe-3.9.1.src clang
+cd clang/tools
+tar xf ../../../../clang-tools-extra-3.9.1.src.tar.xz
+mv clang-tools-extra-3.9.1.src extra
+cd ../../../projects
+tar xf ../../compiler-rt-3.9.1.src.tar.xz
+mv compiler-rt-3.9.1.src compiler-rt
+cd ../..
+mkdir llvm-build
+cd llvm-build
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/lib/llvm-3.9.1 -DLLVM_OPTIMIZED_TABLEGEN=1 ../llvm
+make -j$(nproc)
+make install)""
+```
 
 # If use system clang
 # In Ubuntu
