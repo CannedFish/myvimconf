@@ -44,8 +44,7 @@ cd ~/.vim/bundle/YouCompleteMe
 # In Ubuntu
 sudo apt-get install python-dev
 # In CentOS
-1. Download and update to latest python;
-  ```shell
+# 1. Download and update to latest python;
   yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-dev
 
   mv /usr/bin/python /usr/bin/python2.7.5
@@ -68,10 +67,8 @@ sudo apt-get install python-dev
   whereis pip #查找pip的位置
   mv /usr/bin/pip /usr/bin/pip.bak
   ln -s /usr/local/bin/pip2.7 /usr/bin/pip
-  ```
 
-2. Download and update to latest cmake;
-```shell
+# 2. Download and update to latest cmake;
 yum autoremove cmake
 wget https://cmake.org/files/v3.7/cmake-3.7.1.tar.gz
 tar xzf cmake-3.7.1.tar.gz
@@ -81,10 +78,8 @@ gmake -j$(nproc)
 make install
 cd ..
 rm -fr cmake*)
-```
 
-3. Download and update to latest clang;
-```shell
+# 3. Download and update to latest clang;
 yum install yum-utils 
 yum-builddep -y llvm clang
 wget https://bootstrap.pypa.io/ez_setup.py -O - | python
@@ -111,8 +106,7 @@ mkdir llvm-build
 cd llvm-build
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/lib/llvm-3.9.1 -DLLVM_OPTIMIZED_TABLEGEN=1 ../llvm
 make -j$(nproc)
-make install)""
-```
+make install
 
 # If use system clang
 # In Ubuntu
