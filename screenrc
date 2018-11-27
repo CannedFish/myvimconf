@@ -1,29 +1,29 @@
-startup_message off  
+startup_message off
 term linux
 
-## set a biger buffer  
+## set a biger buffer
 defscrollback 409600
 
-## setting status bar 
-hardstatus alwayslastline                                                                                                                     
-shelltitle "$|bash"  
-hardstatus string '%{= kG}[ %{G}%Y/%m/%d %c:%s %{kG}][%= %{= kw}%?%-Lw%?%{Y}%n*%f%t %{w}%?%+Lw%?%= %{kG}][ %{C}(F4)Detach (F6)Prev (F7)Next (F8)Screen (F9)Title (F12)Quit %{kG}][%{kG} %S %{kG}]'
+## setting status bar
+hardstatus alwayslastline
+shelltitle "$|bash"
+hardstatus string '%{= kG}[ %{G}%Y/%m/%d %c:%s %{kG}][%= %{= kw}%?%-Lw%?%{Y}%n*%f%t %{w}%?%+Lw%?%= %{kG}][ %{C}(F1)Prev (F2)Next (F4)Screen (F8)Detach (F9)Title (F12)Quit %{kG}][%{kG} %S %{kG}]'
 
-## w to show the window list  
-bind w windowlist -b  
+## w to show the window list
+bind w windowlist -b
 bind ^w windowlist -b
 
-## initial apps to run  
-screen  
-# screen  
-# screen  
+## initial apps to run
+screen
+# screen
+# screen
 select 0
 
 ## binding shotcuts
-bindkey -k k4 detach
-bindkey -k k6 prev
-bindkey -k k7 next
-bindkey -k k8 screen
+bindkey -k k1 prev
+bindkey -k k2 next
+bindkey -k k4 screen
+bindkey -k k8 detach
 bindkey -k k9 title
 bindkey -k F2 quit
 
