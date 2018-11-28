@@ -7,7 +7,7 @@ defscrollback 409600
 ## setting status bar
 hardstatus alwayslastline
 shelltitle "$|bash"
-hardstatus string '%{= kG}[ %{G}%Y/%m/%d %c:%s %{kG}][%= %{= kw}%?%-Lw%?%{Y}%n*%f%t %{w}%?%+Lw%?%= %{kG}][ %{C}(F1)Prev (F2)Next (F4)Screen (F8)Detach (F9)Title (F12)Quit %{kG}][%{kG} %S %{kG}]'
+hardstatus string '%{= kG}[ %{G}%Y/%m/%d %c:%s %{kG}][%= %{= kw}%?%-Lw%?%{Y}%n*%f%t %{w}%?%+Lw%?%= %{kG}][ %{C}(F1)Prev (F2)Next (F4)Screen (F5)Detach (F9)Title (F12)Quit %{kG}][%{kG} %S %{kG}]'
 
 ## w to show the window list
 bind w windowlist -b
@@ -23,7 +23,7 @@ select 0
 bindkey -k k1 prev
 bindkey -k k2 next
 bindkey -k k4 screen
-bindkey -k k8 detach
+bindkey -k k5 detach
 bindkey -k k9 title
 bindkey -k F2 quit
 
