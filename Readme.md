@@ -127,8 +127,17 @@ python3 install.py --clang-completer --system-libclang --go-completer
 ## Work with screen
 
 ```shell
+cp screenrc $HOME/.screenrc
 # Create a screen called dev
 SCREEN_NAME='dev'
 screen -dmS $SCREEN_NAME
 ```
 
+## Work with tmux
+
+```shell
+cp tmux.conf $HOME/.tmux.conf
+
+tmux new -s $<session-name>
+tmux att -t $<session-name>
+```
