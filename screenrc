@@ -15,8 +15,6 @@ bind ^w windowlist -b
 
 ## initial apps to run
 screen
-# screen
-# screen
 select 0
 
 ## binding shotcuts
