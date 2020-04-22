@@ -254,3 +254,4 @@ augroup end
 " Close auto format
 " let g:go_fmt_autosave = 0
 " let g:go_asmfmt_autosave = 0
+" let g:go_asmfmt_autosave = 0
