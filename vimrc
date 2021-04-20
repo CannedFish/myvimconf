@@ -239,6 +239,10 @@ augroup end
 "=============== Markdown ===============
 augroup markdown
   au!
+  au FileType markdown setl expandtab
+  au FileType markdown setl tabstop=4
+  au FileType markdown setl softtabstop=4
+  au FileType markdown setl shiftwidth=4
   au FileType markdown setl spell spelllang=en_us,cjk
 augroup end
 
