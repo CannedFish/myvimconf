@@ -53,7 +53,7 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
-colo evening
+colo desert
 set nocompatible " 关闭 vi 兼容模式
 syntax on " 自动语法高亮
 set cursorline " 突出显示当前行
