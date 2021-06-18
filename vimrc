@@ -211,6 +211,7 @@ Plugin 'vim-scripts/SuperTab'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/winmanager'
 " Plugin 'fatih/vim-go' " not work well
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
 filetype plugin indent on " 开启插件
