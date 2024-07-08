@@ -6,6 +6,7 @@ Based on YCM
 
 Update to VIM8 on Ubuntu 1604
 ``` shell
+sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt-get update
 sudo apt-get install vim
