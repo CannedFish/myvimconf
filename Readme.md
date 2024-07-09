@@ -142,3 +142,27 @@ cp tmux.conf $HOME/.tmux.conf
 tmux new -s $<session-name>
 tmux att -t $<session-name>
 ```
+
+## Support Java on Ubuntu
+
+```shell
+# Install JDK
+apt install -y openjdk-17-jdk
+
+# Download maven from sonatype
+wget https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.8.6/apache-maven-3.8.6-bin.tar.gz -P /tmp
+tar xf /tmp/apache-maven-*.tar.gz -C /usr/share/
+rm /tmp/apache-maven-*.tar.gz
+
+# Set up envs
+echo 'MAVEN_HOME=/usr/share/apache-maven-3.8.6' >> ~/.bashrc
+echo 'M2_HOME=$MAVEN_HOME' >> ~/.bashrc
+echo 'PATH=$MAVEN_HOME/bin:${PATH}' >> ~/.bashrc
+source ~/.bashrc
+
+# Check
+mvn -version
+
+# Compile YCM
+./install.py --java-completer --force-sudo
+```
